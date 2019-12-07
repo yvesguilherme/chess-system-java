@@ -85,9 +85,9 @@ public class King extends ChessPiece {
 			mat[p.getRow()][p.getColumn()] = true;
 		}
 
-		// #specialMovie castling
+		// #specialMove castling
 		if (getMoveCount() == 0 && !chessMatch.getCheck()) {
-			// #specialMovie castling kingside rook
+			// #specialMove castling kingside rook
 			Position posT1 = new Position(position.getRow(), position.getColumn() + 3);
 			if (testeRookCatsling(posT1)) {
 				Position p1 = new Position(position.getRow(), position.getColumn() + 1);
@@ -97,7 +97,7 @@ public class King extends ChessPiece {
 				}
 			}
 
-			// #specialMovie castling queenside rook
+			// #specialMove castling queenside rook
 			Position posT2 = new Position(position.getRow(), position.getColumn() - 4);
 			if (testeRookCatsling(posT2)) {
 				Position p1 = new Position(position.getRow(), position.getColumn() - 1);
